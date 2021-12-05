@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+<bean id="permanentAddress" class="learn.spring.Address">
+	<property name="city" value="Chennai"></property>
+	<property name="state" value="TN"></property>
+	<property name="country" value="IN"></property>
+</bean>
+
+<bean id="temporaryAddress" class="learn.spring.Address">
+	<property name="city" value="Madurai"></property>
+	<property name="state" value="TN"></property>
+	<property name="country" value="IN"></property>
+</bean>
+
+<bean id="employeeAddressList" class="learn.spring.EmployeeWithAddressList">
+	<property name="employeeNumber" value="101"></property>
+	<property name="employeeName" value="Somasundaram"></property>
+	<property name="address">
+		<list>  
+			<ref bean="permanentAddress"/>  
+			<ref bean="temporaryAddress"/>  
+		</list>  
+	</property>
+</bean>
+
+</beans>

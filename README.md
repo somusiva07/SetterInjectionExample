@@ -1,0 +1,2 @@
+# SetterInjectionExample
+ Spring SetterInjection proj
